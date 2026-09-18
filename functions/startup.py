@@ -1,4 +1,4 @@
-from function.system import run
+from functions.system import run
 from functions.get import *
 from functions.explorer import *
 def first_start():
