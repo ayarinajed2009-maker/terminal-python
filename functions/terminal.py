@@ -28,26 +28,26 @@ def start(command):
             get.uninstall(app)
     elif command.startswith("read "):
             file = command.split(" ")[1]
-            read(file,True)
+            read(file,False)
     elif command.startswith("mod "):
             file = command.split(" ")[1]
             txt = command.split(" ")[2]
-            mod(file,txt,True)
+            mod(file,txt,False)
     elif command.startswith("creat_file "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            creat_file(path,name,True)
+            creat_file(path,name,False)
     elif command.startswith("delete_file "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            delete_file(path,name,True)
+            delete_file(path,name,False)
     elif command.startswith("cd "):
             path = command.split(" ")[1]
-            cd(path,True)
+            cd(path,False)
     elif command.startswith("mkdir "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            mkdir(path,name,True)
+            mkdir(path,name,False)
     elif command.startswith("notify "):
             title = command.split(" ")[1]
             message = command.split(" ")[2]
@@ -61,7 +61,7 @@ def start(command):
     elif command.startswith("rmdir "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            rmdir(path,name,True)
+            rmdir(path,name,False)
     elif command.startswith("help "):
             command = command.split(" ")[1]
             if command == "install":
