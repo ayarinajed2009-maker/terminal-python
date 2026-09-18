@@ -1,4 +1,8 @@
-from functions.system import *
+from  os import system
+def run(command):
+    system(command)
+def delete_file(path,name):
+    run("cd "+path+" && del "+name)
 class get():
     def install(app):
         run("winget install "+app)
