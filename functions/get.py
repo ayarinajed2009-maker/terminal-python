@@ -26,7 +26,7 @@ class get():
             run("rmdir /s /q temps")
             print("No update available !")
         elif local_update != server_update:
-            run("rmdir /s /q temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/needs.py -O functions/needs.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/version -O functions/version")
+            run("rmdir /s /q temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/needs.py -O functions/needs.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/version -O functions/version && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/compiler.py -O compiler.py")
     def info(app):
         run("winget show "+app)
             
