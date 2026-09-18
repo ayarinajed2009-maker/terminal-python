@@ -22,11 +22,11 @@ class get():
             local_update = file.read()
         with open('temps/version', 'r', encoding='utf-8') as file:
             server_update = file.read()
-        if local_update != server_update:
-            run("rmdir /s /q temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/needs.py -O functions/needs.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/version -O functions/version")
-        else:
+        if local_update == server_update:
             run("rmdir /s /q temps")
             print("No update available !")
+        elif local_update != server_update:
+            run("rmdir /s /q temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/needs.py -O functions/needs.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/version -O functions/version")
     def info(app):
         run("winget show "+app)
             
