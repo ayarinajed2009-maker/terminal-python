@@ -1,3 +1,4 @@
+from os import system,path
 def run(command):
     system(command)
 def rmdir(path,name):
