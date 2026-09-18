@@ -3,7 +3,7 @@ from functions.video import *
 from functions.get import *
 from functions.terminal import *
 from functions.explorer import *
-from function.updater import *
+from functions.updater import *
 if exist("code.npx"):
     with open('code.npx', 'r', encoding='utf-8') as file:
         file = file.read()
