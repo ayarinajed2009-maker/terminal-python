@@ -1,5 +1,6 @@
 import os
 from time import sleep
+from win11toast import toast
 def run(command):
     os.system(command)
 def shutdown(time):

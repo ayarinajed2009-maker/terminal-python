@@ -1,8 +1,10 @@
-from  os import system
+from  os import system,path
 def run(command):
     system(command)
 def delete_file(path,name):
     run("cd "+path+" && del "+name)
+def exist(file):
+    return path.exists(file)
 class get():
     def install(app):
         run("winget install "+app)
@@ -32,6 +34,7 @@ class get():
         elif local_update != server_update:
             run("rmdir /s /q temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/version -O functions/version && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/compiler.py -O compiler.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/get.py -O functions/get.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/terminal.py -O functions/terminal.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/run.bat -O run.bat && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/explorer.py -O functions/explorer.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/startup.py -O functions/startup.py && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/gener.py -O functions/gener.py ")
             delete_file("function/","needs.py")
+            run("echo False >first_start.txt")
     def info(app):
         run("winget show "+app)
     def start_up():
