@@ -1,4 +1,4 @@
-from functions.needs import *
+from functions.system import *
 def play(path):
     run("cd "+path)
     run("start "+path)

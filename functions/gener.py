@@ -1,10 +1,3 @@
-import os
-from random import randint
-from win11toast import toast
-def run(command):
-    os.system(command)
-def exist(file):
-    return os.path.exists(file)
 def generate_code(long):
     code=""
     for i in range(long):
@@ -19,5 +12,3 @@ def generate_chaine(long):
         else:
             chaine+=chr(randint(ord('a'),ord('z')))
     return chaine
-def notify(title, message):
-    toast(title, message)

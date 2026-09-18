@@ -1,5 +1,6 @@
-from needs import *
+from functions.system import *
 import os
+import getpass
 def where():
     return os.getcwd()
 def who():
@@ -24,11 +25,12 @@ def creat_file(path,name):
     run("cd "+path)
     run("echo "+" >"+name)
 def delete_file(path,name):
-    run("cd "+path)
-    run("del "+name)
+    run("cd "+path+" && del "+name)
 def mkdir(path,name):
     run("cd "+path)
     run("mkdir "+name)
 def rmdir(path,name):
     run("cd "+path)
     run("rmdir "+name)
+def exist(file):
+    return os.path.exists(file)
