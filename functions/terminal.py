@@ -24,7 +24,7 @@ def start(command):
             app = command.split(" ")[1]
             if app=="core"or app=="Core":
                 coreupdate()
-            elif app=="Add-ons" or app=="add-ons" or app=="addons"
+            elif app=="Add-ons" or app=="add-ons" or app=="addons":
                 Addonsupdate()
             elif app=="get"or app=="Get"or app=="GET":
                 getupdate()
