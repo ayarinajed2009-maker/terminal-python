@@ -1,7 +1,7 @@
 from functions.system import *
 from functions.video import *
 from functions.get import *
-def start():
+def start(command):
     if command == "help":
             print("Commands:")
             print("help - shows this help message")
