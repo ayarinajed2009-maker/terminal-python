@@ -9,7 +9,7 @@ def start():
             print("update - updates the terminal")
             print("info <app> - shows information about an app")
     elif command == "exit":
-            break
+            exit()
     elif command == "update":
             get.self_update()
     elif command.startswith("info "):
