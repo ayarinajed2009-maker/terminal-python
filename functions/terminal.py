@@ -2,6 +2,7 @@ from functions.system import *
 from functions.video import *
 from functions.get import *
 from functions.explorer import *
+from functions.updater import *
 def start(command):
     if command == "help":
             print("Commands:")
@@ -11,8 +12,6 @@ def start(command):
             print("info <app> - shows information about an app")
     elif command == "exit":
             exit()
-    elif command == "update":
-            get.self_update()
     elif command.startswith("info "):
             app = command.split(" ")[1]
             get.info(app)
@@ -23,7 +22,16 @@ def start(command):
             get.update_list(True)
     elif command.startswith("update "):
             app = command.split(" ")[1]
-            get.update(app)
+            if app=="core"or app=="Core":
+                coreupdate()
+            elif app=="Add-ons" or app=="add-ons" or app=="addons"
+                Addonsupdate()
+            elif app=="get"or app=="Get"or app=="GET":
+                getupdate()
+            elif app=="full-update"or app=="Full-update" or app=="fullupdate" or app=="Fullupdate":
+                allupdate()
+            else:
+                get.update(app)
     elif command.startswith("uninstall "):
             app = command.split(" ")[1]
             get.uninstall(app)
