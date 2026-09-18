@@ -1,6 +1,7 @@
 from functions.system import *
 from functions.video import *
 from functions.get import *
+from functions.explorer import *
 def start(command):
     if command == "help":
             print("Commands:")
@@ -26,28 +27,59 @@ def start(command):
     elif command.startswith("uninstall "):
             app = command.split(" ")[1]
             get.uninstall(app)
-    elif command.startswith("read "):
-            file = command.split(" ")[1]
-            read(file,False)
+    elif command.startswith("where"):
+            print(where())
+    elif command.startswith("who"):
+            print(who())
+    elif command.startswith("ls"):
+            print(ls())
+    elif command.startswith("cd "):
+            path = command.split(" ")[1]
+            cd(path)
     elif command.startswith("mod "):
             file = command.split(" ")[1]
             txt = command.split(" ")[2]
-            mod(file,txt,False)
+            mod(file,txt)
+    elif command.startswith("overwrite "):
+            file = command.split(" ")[1]
+            txt = command.split(" ")[2]
+            overwrite(file,txt)
+    elif command.startswith("read "):   
+            file = command.split(" ")[1]
+            read(file)
+    elif command.startswith("pfile "):
+            file = command.split(" ")[1]
+            pfile(file)
     elif command.startswith("creat_file "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            creat_file(path,name,False)
+            creat_file(path,name)
     elif command.startswith("delete_file "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            delete_file(path,name,False)
-    elif command.startswith("cd "):
-            path = command.split(" ")[1]
-            cd(path,False)
+            delete_file(path,name)
     elif command.startswith("mkdir "):
             path = command.split(" ")[1]
             name = command.split(" ")[2]
-            mkdir(path,name,False)
+            mkdir(path,name)
+    elif command.startswith("rmdir "):
+            path = command.split(" ")[1]
+            name = command.split(" ")[2]
+            rmdir(path,name)
+    elif command.startswith("shutdown "):
+            time = command.split(" ")[1]
+            shutdown(time)
+    elif command.startswith("restart "):
+            time = command.split(" ")[1]
+            restart(time)
+    elif command.startswith("hibernate "):
+            time = command.split(" ")[1]
+            hibernate(time)
+    elif command.startswith("wait "):
+            time = command.split(" ")[1]
+            wait(time)
+    elif command.startswith("clear"):
+            run("cls")
     elif command.startswith("notify "):
             title = command.split(" ")[1]
             message = command.split(" ")[2]

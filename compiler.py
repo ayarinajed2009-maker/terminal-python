@@ -1,8 +1,10 @@
-#compiler v0.1 beta
 from functions.system import *
 from functions.video import *
 from functions.get import *
 from functions.terminal import *
+from functions.explorer import *
+from functions.startup import *
+first_start()
 if exist("code.npx"):
     with open('code.npx', 'r', encoding='utf-8') as file:
         file = file.read()
