@@ -19,10 +19,10 @@ def start(command):
     elif command.startswith("photo "):
             app= command.split(" ")[1]
             pgenarete(app)
-    elif command.startswitch("cryp "):
+    elif command.startswith("cryp "):
             app= command.split(" ")[1]
             generate_crypt.run(app,True)
-    elif command.startswitch("decryp "):
+    elif command.startswith("decryp "):
             app= command.split(" ")[1]
             generate_crypt.run(app,False)
     elif command.startswith("install "):
