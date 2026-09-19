@@ -3,6 +3,7 @@ from functions.video import *
 from functions.get import *
 from functions.explorer import *
 from functions.updater import *
+from functions.image import * 
 def start(command):
     if command == "help":
             print("Commands:")
@@ -15,6 +16,9 @@ def start(command):
     elif command.startswith("info "):
             app = command.split(" ")[1]
             get.info(app)
+    elif command.startswith("photo "):
+            app= command.split("")[1]
+            pgenarete(app)
     elif command.startswith("install "):
             app = command.split(" ")[1]
             get.install(app)

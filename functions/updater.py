@@ -47,6 +47,7 @@ def Addonsupdate():
         if choix=="Y" or choix=="y":
             delete_file("functions","get.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py")
+            run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/image.py -O functions/image.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/gener.py -O functions/gener.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/Addonsupdate_version -O functions/Addonsupdate_version")
         else:
