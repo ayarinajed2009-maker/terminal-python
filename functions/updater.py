@@ -29,6 +29,7 @@ def getupdate():
             delete_file("functions","get.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/get.py -O functions/get.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/get_version -O functions/get_version")
+            run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/updater.py -O functions/updater.py")
         else:
             pass
     clean()
