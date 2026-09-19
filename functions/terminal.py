@@ -1,6 +1,5 @@
 from functions.system import *
 from functions.video import *
-from functions.get import *
 from functions.explorer import *
 from functions.updater import *
 from functions.image import * 
@@ -15,15 +14,15 @@ def start(command):
             exit()
     elif command.startswith("info "):
             app = command.split(" ")[1]
-            get.info(app)
+            win.info(app)
     elif command.startswith("photo "):
             app= command.split("")[1]
             pgenarete(app)
     elif command.startswith("install "):
             app = command.split(" ")[1]
-            get.install(app)
-    elif command.startswith("update_list"):
-            get.update_list(True)
+            win.install(app)
+    elif command.startswith("updates"):
+            win.updates(True)
     elif command.startswith("update "):
             app = command.split(" ")[1]
             if app=="core"or app=="Core":
@@ -35,10 +34,10 @@ def start(command):
             elif app=="full-update"or app=="Full-update" or app=="fullupdate" or app=="Fullupdate":
                 allupdate()
             else:
-                get.update(app)
+                win.update(app)
     elif command.startswith("uninstall "):
             app = command.split(" ")[1]
-            get.uninstall(app)
+            win.uninstall(app)
     elif command.startswith("where"):
             print(where())
     elif command.startswith("who"):

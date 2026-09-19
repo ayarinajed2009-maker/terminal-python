@@ -1,6 +1,5 @@
 from functions.system import *
 from functions.video import *
-from functions.get import *
 from functions.terminal import *
 from functions.explorer import *
 from functions.updater import *

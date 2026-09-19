@@ -82,3 +82,22 @@ def allupdate():
     coreupdate()
     getupdate()
     Addonsupdate()
+class win():
+    def install(app):
+        run("winget install "+app)
+    def update(app):
+        run("winget update "+app)
+    def info(app):
+        run("winget show "+app)
+    def remove(app):
+        run("winget uninstall "+app)
+    def updates():
+        run("winget upgrade")
+    def download(app):
+        run("winget download "+app)
+    def version():
+        with open("functions/Addonsupdate_version", 'r', encoding='utf-8') as file:
+                local_version = file.read()
+        print("win function v"+local_version)
+        print("Outils:")
+        print("winget"+str(run("winget --version")))
