@@ -13,3 +13,5 @@ def wait(time):
     sleep(time)
 def notify(title, message):
     toast(title, message)
+def echo(*args):
+    print(*args)

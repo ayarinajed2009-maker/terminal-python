@@ -46,10 +46,9 @@ def Addonsupdate():
         print("Updated found v"+server_version)
         choix=str(input("Do u want to update?:(Y or n)"))
         if choix=="Y" or choix=="y":
-            delete_file("functions","get.py")
+            delete_file("functions","gener.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/video.py -O functions/video.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/image.py -O functions/image.py")
-            run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/gener.py -O functions/gener.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/Addonsupdate_version -O functions/Addonsupdate_version")
         else:
             pass
@@ -67,7 +66,7 @@ def coreupdate():
         print("Updated found v"+server_version)
         choix=str(input("Do u want to update?:(Y or n)"))
         if choix=="Y" or choix=="y":
-            delete_file("functions","get.py")
+            delete_file("functions","gener.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/terminal.py -O functions/terminal.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/crypt.py -O functions/crypt.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py")

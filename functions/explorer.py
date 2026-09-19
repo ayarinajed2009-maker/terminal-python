@@ -9,12 +9,12 @@ def ls():
     return os.listdir()
 def cd(path):
     os.chdir(path)
-def mod(file,txt):
+def mod(file,*args):
     with open(file, "a") as f:
-        f.write(txt)
-def overwrite(file,txt):
+        f.write(*args)
+def overwrite(file,*args):
     with open(file, "w") as f:
-        f.write(txt)
+        f.write(*args)
 def read(file):
     with open(file, "r") as f:
         return f.read()
@@ -24,13 +24,14 @@ def pfile(file):
 def creat_file(path,name):
     run("cd "+path)
     run("echo "+" >"+name)
+    overwrite(name," ")
 def delete_file(path,name):
     run("cd "+path+" && del "+name)
-def mkdir(path,name):
+def mkdir(path,*args):
     run("cd "+path)
-    run("mkdir "+name)
-def rmdir(path,name):
+    run("mkdir "+*args)
+def rmdir(path,*args):
     run("cd "+path)
-    run("rmdir "+name)
+    run("rmdir "+*args)
 def exist(file):
     return os.path.exists(file)

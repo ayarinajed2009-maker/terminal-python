@@ -42,6 +42,9 @@ def start(command):
                 allupdate()
             else:
                 win.update(app)
+    elif command.startswith("echo "):
+            app=command.split(" ")[1]
+            echo(app)
     elif command.startswith("uninstall "):
             app = command.split(" ")[1]
             win.uninstall(app)
