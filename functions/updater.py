@@ -69,6 +69,7 @@ def coreupdate():
         if choix=="Y" or choix=="y":
             delete_file("functions","get.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/terminal.py -O functions/terminal.py")
+            run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/crypt.py -O functions/crypt.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/system.py -O functions/system.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/explorer.py -O functions/explorer.py")
             run("wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/updater.py -O functions/updater.py")

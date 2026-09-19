@@ -2,6 +2,7 @@ from functions.system import *
 from functions.video import *
 from functions.explorer import *
 from functions.updater import *
+from functions.crypt import *
 from functions.image import * 
 def start(command):
     if command == "help":
@@ -16,8 +17,14 @@ def start(command):
             app = command.split(" ")[1]
             win.info(app)
     elif command.startswith("photo "):
-            app= command.split("")[1]
+            app= command.split(" ")[1]
             pgenarete(app)
+    elif command.startswitch("cryp "):
+            app= command.split(" ")[1]
+            generate_crypt.run(app,True)
+    elif command.startswitch("decryp "):
+            app= command.split(" ")[1]
+            generate_crypt.run(app,False)
     elif command.startswith("install "):
             app = command.split(" ")[1]
             win.install(app)

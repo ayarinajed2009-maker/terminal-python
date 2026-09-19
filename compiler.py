@@ -1,7 +1,9 @@
+#libs calls#
 from functions.system import *
 from functions.video import *
 from functions.terminal import *
 from functions.explorer import *
+from function.crypt import *
 from functions.updater import *
 if exist("code.npx"):
     with open('code.npx', 'r', encoding='utf-8') as file:
