@@ -40,6 +40,8 @@ def start(command):
                 getupdate()
             elif app=="full-update"or app=="Full-update" or app=="fullupdate" or app=="Fullupdate":
                 allupdate()
+            elif app=="ver"or app=="version" or app=="Ver" or app=="Version"or app=="VERSION" or app=="VER":
+                version()
             else:
                 win.update(app)
     elif command.startswith("echo "):

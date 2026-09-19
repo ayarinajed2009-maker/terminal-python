@@ -1,4 +1,4 @@
-from os import system,path
+from os import system,path,chdir
 def run(command):
     system(command)
 def rmdir(path,name):
@@ -82,6 +82,19 @@ def allupdate():
     coreupdate()
     getupdate()
     Addonsupdate()
+def pfile(file,dir):
+    os.chdir(dir)
+    with open(file, "r") as f:
+        print(f.read())
+def verison():
+    print("updater v",end="")
+    pfile("functions",core_version)
+    print("Core v",end="")
+    pfile("functions",get_version)
+    print("Add-ons v",end="")
+    pfile("functions",Addonsupdate_version)
+    print("Terminal v",end="")
+    pfile("",version)
 class win():
     def install(app):
         run("winget install "+app)
