@@ -40,7 +40,7 @@ def Addonsupdate():
     with open('temps/version', 'r', encoding='utf-8') as file:
         server_version = file.read()
     if server_version==local_version:
-        print("They are no get updates !")
+        print("They are no Add-on updates !")
         pass
     elif server_version!=local_version:
         print("Updated found v"+server_version)
@@ -61,7 +61,7 @@ def coreupdate():
     with open('temps/version', 'r', encoding='utf-8') as file:
         server_version = file.read()
     if server_version==local_version:
-        print("They are no get updates !")
+        print("They are no Core updates !")
         pass
     elif server_version!=local_version:
         print("Updated found v"+server_version)
