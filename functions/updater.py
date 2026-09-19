@@ -9,7 +9,7 @@ def exist(file):
 def delete_file(path,name):
     run("cd "+path+" && del "+name)
 def getinfo(name):
-    run("mkdir temps && cd temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/"+name+"-O version")
+    run("mkdir temps && cd temps && wget https://raw.githubusercontent.com/ayarinajed2009-maker/terminal-python/refs/heads/main/functions/"+name+" -O version")
 def clean():
     delete_file("temps","version")
     rmdir(' ','temps')
