@@ -1,14 +1,27 @@
-from functions.system import *
-import os
-import getpass
+from os import system, getcwd,getpass,listdir,chdir,path
+from time import sleep
+def run(command):
+    system(command)
+def sudo(command):
+    run("sudo "+command)
+def shutdown(time):
+    run("shutdown " + str(time))
+def restart(time):
+    run("shutdown /r /t " + str(time))
+def hibernate(time):
+    run("shutdown /h /t" + str(time))
+def wait(time):
+    sleep(time)
+def echo(*args):
+    print(*args)
 def where():
-    return os.getcwd()
+    return getcwd()
 def who():
     return getpass.getuser()
 def ls():
-    return os.listdir()
+    return listdir()
 def cd(path):
-    os.chdir(path)
+    chdir(path)
 def mod(file,*args):
     with open(file, "a") as f:
         f.write(*args)
@@ -26,12 +39,12 @@ def creat_file(path,name):
     run("echo "+" >"+name)
     overwrite(name," ")
 def delete_file(path,name):
-    run("cd "+path+" && del "+name)
+    run("cd "+path+" && rm "+name)
 def mkdir(path,*args):
     run("cd "+path)
-    run("mkdir "+*args)
+    run("mkdir "+str(*args))
 def rmdir(path,*args):
     run("cd "+path)
-    run("rmdir "+*args)
+    run("rmdir "+str(*args))
 def exist(file):
-    return os.path.exists(file)
+    return path.exists(file)
