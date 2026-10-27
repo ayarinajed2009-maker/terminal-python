@@ -1,7 +1,6 @@
-# First, install the library in your terminal: pip install cryptography
 from random import randint
-from cryptography.fernet import Fernet
-from functions.explorer import read,creat_file,overwrite,delete_file
+from fernet import Fernet
+
 class generate_crypt():
     def generate_code(long:int):
         code=""
