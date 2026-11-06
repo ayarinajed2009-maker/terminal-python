@@ -1,6 +1,19 @@
-from functions.system import *
-import os
-import getpass
+lazy import os
+lazy import time as time
+lazy import shutil
+lazy import getpass
+def run(command):
+    os.system(command)
+def shutdown(time):
+    run("shutdown /s /t " + str(time))
+def restart(time):
+    run("shutdown /r /t " + str(time))
+def hibernate(time):
+    run("shutdown /h /t" + str(time))
+def wait(time):
+    time.sleep(time)
+def echo(*args):
+    print(*args)
 def where():
     return os.getcwd()
 def who():
@@ -29,9 +42,11 @@ def delete_file(path,name):
     run("cd "+path+" && del "+name)
 def mkdir(path,*args):
     run("cd "+path)
-    run("mkdir "+*args)
+    run("mkdir "+str(*args))
 def rmdir(path,*args):
     run("cd "+path)
-    run("rmdir "+*args)
+    run("rmdir "+args)
 def exist(file):
     return os.path.exists(file)
+def cp(file,new_path):
+    shutil.copyfile(file,new_path)

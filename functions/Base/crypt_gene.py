@@ -1,7 +1,7 @@
 # First, install the library in your terminal: pip install cryptography
 from random import randint
 from cryptography.fernet import Fernet
-from functions.explorer import read,creat_file,overwrite,delete_file
+lazy import functions.Base.system as system
 class generate_crypt():
     def generate_code(long:int):
         code=""
@@ -39,20 +39,20 @@ class generate_crypt():
         encrypted_text, secret_key = generate_crypt.ecrypt(text)
         print(f"Encrypted Text: {encrypted_text}")
         print(f"Key (Keep secret!): {secret_key}\n")
-        creat_file("","Key")
-        creat_file("",file)
-        overwrite("Key",secret_key)
-        overwrite(file,encrypted_text)
+        system.creat_file("",file+"-Key")
+        system.creat_file("",file+".py")
+        system.overwrite(file+"-Key",secret_key)
+        system.overwrite(file+".py",encrypted_text)
     def open(file:str,key:str,txt:str):
         original_text = generate_crypt.decrypt(txt, key)
         print(f"Decrypted Text: {original_text}")
-        overwrite(file,original_text)
-        delete_file("","Key")
+        system.overwrite(file,original_text)
+        system.delete_file("","Key")
     def run(file:str,cry:bool):
         if cry:
-            text=read(file)
+            text=system.read(file+".py")
             generate_crypt.output(file,text)
         elif not(cry):
-            text=read(file)
-            key=read("Key")
+            text=system.read(file)
+            key=system.read("Key")
             generate_crypt.open(file,key,text)

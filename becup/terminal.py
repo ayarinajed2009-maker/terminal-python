@@ -1,9 +1,4 @@
-from functions.system import *
-from functions.video import *
-from functions.explorer import *
-from functions.updater import *
-from functions.crypt import *
-from functions.image import * 
+from functions.Base.terminal_libs import *
 def start(command):
     if command == "help":
             print("Commands:")
@@ -41,7 +36,7 @@ def start(command):
             elif app=="full-update"or app=="Full-update" or app=="fullupdate" or app=="Fullupdate":
                 allupdate()
             elif app=="ver"or app=="version" or app=="Ver" or app=="Version"or app=="VERSION" or app=="VER":
-                version()
+                print("Will came soon ! ")
             else:
                 win.update(app)
     elif command.startswith("echo "):
@@ -103,10 +98,6 @@ def start(command):
             wait(time)
     elif command.startswith("clear"):
             run("cls")
-    elif command.startswith("notify "):
-            title = command.split(" ")[1]
-            message = command.split(" ")[2]
-            notify(title,message)
     elif command.startswith("play "):
             path = command.split(" ")[1]
             play(path)
@@ -169,3 +160,19 @@ def start(command):
             print("Unknown command: "+command)
             print("Try update the terminal to get the latest commands !")
             print("Type 'help' to see all commands")
+def run_terminal():
+        if exist("main.npx"):
+                with open('main.npx', 'r', encoding='utf-8') as file:
+                        file = file.readlines()
+                for i in range(len(file)):
+                        start(file[i])
+        elif not exist("main.npx"):
+                print("no main.npx file to run found !")
+                print("opening terminal instead...")
+                wait(3)
+                run("cls")
+                print("Terminal v0.1 beta")
+                print("Type 'help' to see all commands")
+                while True:
+                        command = input(">>> ")
+                        start(command)
