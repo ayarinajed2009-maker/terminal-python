@@ -1,1 +1,2 @@
-print("This is Test for Only ! ")
+def test():
+    print("This is Test for Only ! ")

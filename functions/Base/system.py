@@ -50,3 +50,5 @@ def exist(file):
     return os.path.exists(file)
 def cp(file,new_path):
     shutil.copyfile(file,new_path)
+def clear():
+    run("cls")
