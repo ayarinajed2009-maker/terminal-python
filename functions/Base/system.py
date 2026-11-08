@@ -1,5 +1,5 @@
 lazy import os
-lazy import time as time
+lazy import time
 lazy import shutil
 lazy import getpass
 def run(command):
@@ -10,8 +10,8 @@ def restart(time):
     run("shutdown /r /t " + str(time))
 def hibernate(time):
     run("shutdown /h /t" + str(time))
-def wait(time):
-    time.sleep(time)
+def wait(times):
+    time.sleep(times)
 def echo(*args):
     print(*args)
 def where():

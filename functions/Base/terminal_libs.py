@@ -5,3 +5,6 @@ from functions.Base.terminal import *
 from functions.Others.Halo import *
 from functions.Others.image import *
 from functions.Others.video import *
+from functions.Others.nano import *
+from functions.Others.audio import *
+from functions.Base.system import *

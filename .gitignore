@@ -6,7 +6,8 @@ compiler/
 
 # C extensions
 *.so
-# Test Files and Videos
+# Test Files and Videos and audios ! 
+*.mp3
 *.mp4
 *.test
 # Distribution / packaging
